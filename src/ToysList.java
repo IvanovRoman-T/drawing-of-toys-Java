@@ -30,6 +30,7 @@ public class ToysList {
             s.append(toy.getName());
             s.append(", ");
         }
+        s.deleteCharAt(s.length() - 2);
         return s.toString();
     }
 

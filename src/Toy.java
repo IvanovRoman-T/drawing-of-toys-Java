@@ -4,11 +4,16 @@ public class Toy {
     private int amount;
     private double weight;
 
-    Toy(String name, int amount, double weight, ToysList toys){
+    Toy(String name, int amount, double weight, ToysList toys, int id){
+        this.id = id;
         this.name = name;
         this.amount = amount;
         this.weight = weight;
         toys.addToy(this);
+    }
+
+    Toy(String name, int amount, double weight, ToysList toys){
+        this(name, amount, weight, toys, Math.round((float) Math.random() * 10000));
     }
 
     public void setAmount(int amount) {
@@ -33,6 +38,6 @@ public class Toy {
 
     @Override
     public String toString() {
-        return String.format("Name: %s; Amount: %d; Weight: %.2f%%", this.name, this.amount, this.weight);
+        return String.format("Id: %d; Name: %s; Amount: %d; Weight: %.2f%%", this.id, this.name, this.amount, this.weight);
     }
 }

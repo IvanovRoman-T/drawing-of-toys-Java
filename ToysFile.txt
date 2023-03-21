@@ -1,0 +1,3 @@
+Id: 9321; Name: Солдатик; Amount: 99; Weight: 20%
+Id: 2199; Name: Машинка; Amount: 97; Weight: 30%
+Id: 408; Name: Кораблик; Amount: 94; Weight: 50%

@@ -8,10 +8,24 @@ public class ToysQueue {
     }
 
     void addToQueue(Toy toy){
-        this.toyQueue.add(toy);
+        this.toyQueue.addLast(toy);
     }
 
-    Toy peekToy(){
-        return this.toyQueue.peekFirst();
+    String getFirstToy(){
+        this.toyQueue.peekFirst().setAmount(this.toyQueue.peekFirst().getAmount() - 1);
+        return this.toyQueue.removeFirst().getName();
     }
+
+    String peekLastToy(){
+        return this.toyQueue.peekLast().getName();
+    }
+
+    String  peekFirstToy(){
+        return this.toyQueue.peekFirst().getName();
+    }
+
+    boolean isEmpty(){
+        return this.toyQueue.isEmpty();
+    }
+
 }
